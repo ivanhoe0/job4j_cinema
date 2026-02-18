@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/header :: header"></head>
+<body>
+<div th:replace="fragments/navigation :: navigation"></div>
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead>
+            <tr>
+                <th class="col-md-3">#</th>
+                <th class="col-md-6">Название фильма</th>
+                <th class="col-md-6">Дата начала</th>
+                <th class="col-md-6">Цена</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="seance: ${sessions}">
+                <td>
+                    <img th:src="@{/files/{fileId}(fileId=${seance.fileId})}" class="w-50 h-50" alt="No image">
+                </td>
+                <td>
+                    <a th:text="${seance.film}"
+                       th:href="@{sessions/{seanceId}(seanceId=${seance.id})}">
+                    </a>
+                </td>
+                <td th:text="${{seance.startDate}}" />
+                <td th:text="${seance.price}" />
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<footer th:include="fragments/footer :: footer"></footer>
+</body>
+</html>

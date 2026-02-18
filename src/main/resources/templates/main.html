@@ -1,0 +1,15 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/header :: header"></head>
+<body>
+<div th:replace="fragments/navigation :: navigation"></div>
+<div class="container">
+    <h3>Проект Cinema</h3>
+    <ul style="list-style-type: disc;"> <!-- square, circle, disc, none -->
+        <li><a class="nav-item nav-link" th:href="@{/films}">Кинотека</a></li>
+        <li><a class="nav-item nav-link" th:href="@{/sessions}">Расписение сеансов</a></li>
+    </ul>
+</div>
+<footer th:include="fragments/footer :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,3 @@
+INSERT INTO film_sessions (film_id, halls_id, start_time, end_time, price) VALUES (1, 1, '2026-02-15 13:45:00', '2026-02-15 16:00:00', 300);
+INSERT INTO film_sessions (film_id, halls_id, start_time, end_time, price) VALUES (2, 1, '2026-02-15 16:15:00', '2026-02-15 19:29:00', 450);
+INSERT INTO film_sessions (film_id, halls_id, start_time, end_time, price) VALUES (3, 3, '2026-02-15 14:00:00', '2026-02-15 15:55:00', 300);

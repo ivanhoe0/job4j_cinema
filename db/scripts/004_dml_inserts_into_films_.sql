@@ -1,0 +1,6 @@
+INSERT INTO films("name", description, "year", genre_id, minimal_age, duration_in_minutes, file_id) VALUES ('The rock', 'The Rock (1996) is a high-octane action thriller directed by Michael Bay, featuring Sean Connery as a former British spy and Nicolas Cage as an FBI chemist. They must infiltrate Alcatraz Island to stop a rogue general, played by Ed Harris, who threatens to launch deadly missiles at San Francisco.',
+1996, 1, 12, 136, 1);
+INSERT INTO films("name", description, "year", genre_id, minimal_age, duration_in_minutes, file_id) VALUES ('Titanic', 'James Cameron’s Titanic (1997) is an epic romance-disaster film starring Leonardo DiCaprio (Jack) and Kate Winslet (Rose), depicting the 1912 maiden voyage of the RMS Titanic. The story follows a high-society woman and a poor artist who fall in love before the ship strikes an iceberg.',
+1997, 2, 12, 194, 2);
+INSERT INTO films("name", description, "year", genre_id, minimal_age, duration_in_minutes, file_id) VALUES ('The ring', 'The Ring (2002) is a supernatural horror thriller directed by Gore Verbinski, starring Naomi Watts as journalist Rachel Keller. She investigates a cursed videotape that kills viewers seven days after watching it, following a phone call. After her son watches the tape, she must uncover the secrets of the ghost girl Samara to break the curse.',
+2002, 3, 18, 115, 3);

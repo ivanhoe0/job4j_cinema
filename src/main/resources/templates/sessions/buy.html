@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/header :: header"></head>
+<body>
+<div th:replace="fragments/navigation :: navigation"></div>
+<div class="container">
+    <form class="mt-3" th:action="@{/sessions/buy}" method="post" th:object="${seance}">
+        <input type="hidden" name="id" th:field="*{id}">
+        <input type="hidden" name="fileId" th:field="*{fileId}">
+        <div class="row">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="col-md-3">#</th>
+                    <th class="col-md-6">Название фильма</th>
+                    <th class="col-md-6">Дата начала</th>
+                    <th class="col-md-6">Цена</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <img th:src="@{/files/{fileId}(fileId=${seance.fileId})}" class="w-50 h-50" alt="No image">
+                    </td>
+                    <td th:text="${seance.film}"/>
+                    <td th:text="${{seance.startDate}}" />
+                    <td th:text="${seance.price}" />
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mb-3">
+            <label for="rowNumber"><b>Ряд</b></label>
+            <select class="form-control" id="rowNumber" name="rowNumber">
+                <option th:each="i : ${#numbers.sequence(1, seance.rowCount)}" th:text="${i}" th:value="${i}"></option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="placeNumber"><b>Место</b></label>
+            <select class="form-control" id="placeNumber" name="placeNumber">
+                <option th:each="i : ${#numbers.sequence(1, seance.placeCount)}" th:text="${i}" th:value="${i}"></option>
+            </select>
+        </div>
+        <div class="mb-3 row">
+            <div class="col-6"></div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-4"><a class="btn btn-light w-100"
+                                          th:href="@{/sessions}">Отмена</a></div>
+                    <div class="col-4"><button class="btn btn-success w-100"
+                                               type="submit">Купить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<footer th:include="fragments/footer :: footer"></footer>
+</body>
+</html>
