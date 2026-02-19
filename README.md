@@ -4,7 +4,15 @@
 Покупка билетов доступна только авторизованным пользователям.
 
 ### Стек технологий
->java 21, SpringBoot 3.4, PostgreSQL 18, Maven 3.9.11
+>java 21 <br>
+>SpringBoot 3.4 <br>
+>PostgreSQL 18 <br>
+>Maven 3.9.11
+
+### Требования к окружению
+>java 21 <br>
+>PostgreSQL 18 <br>
+>Maven 3.9.11
 
 ### Взаимодействие с приложением
 
@@ -22,3 +30,16 @@
 
 Страница покупки билета
 ![img_4.png](screenshots/img_4.png)
+
+### Сборка и запуск
+Для запуска проекта используйте следующие команды в корневой директории:
+```bash
+  mvn package
+  ```  
+а затем:
+```bash
+  cd .\target
+  java -jar job4j_cinema-1.0-SNAPSHOT.jar
+```
+
+

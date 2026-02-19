@@ -1,10 +1,9 @@
-package ru.job4j.cinema.repository;
+package ru.job4j.cinema.repository.implementation;
 
 import org.springframework.stereotype.Repository;
 import org.sql2o.Sql2o;
 import ru.job4j.cinema.model.Genre;
-
-import java.util.Optional;
+import ru.job4j.cinema.repository.GenreRepository;
 
 @Repository
 public class Sql2oGenreRepository implements GenreRepository {

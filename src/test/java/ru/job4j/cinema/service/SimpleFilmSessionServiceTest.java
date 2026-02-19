@@ -9,6 +9,7 @@ import ru.job4j.cinema.model.Hall;
 import ru.job4j.cinema.repository.FilmRepository;
 import ru.job4j.cinema.repository.FilmSessionRepository;
 import ru.job4j.cinema.repository.HallRepository;
+import ru.job4j.cinema.service.implementation.SimpleFilmSessionService;
 
 import java.time.LocalDateTime;
 import java.util.List;
